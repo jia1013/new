@@ -1,0 +1,11 @@
+services:
+  upload-service:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/data
+    environment:
+      - DATA_DIR=/data
+    restart: unless-stopped
+    container_name: upload-service
