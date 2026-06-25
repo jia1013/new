@@ -5,7 +5,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-DATA_DIR = "/data"
+DATA_DIR = os.environ.get('DATA_DIR', '/data')
 os.makedirs(DATA_DIR, exist_ok=True)
 
 CONTENT_FILE = os.path.join(DATA_DIR, "content.json")
