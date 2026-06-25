@@ -1,6 +1,6 @@
 services:
   upload-service:
-    build: .
+    image: jiasdocker/upload-service:latest
     ports:
       - "5000:5000"
     volumes:
